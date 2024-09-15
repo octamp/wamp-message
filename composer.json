@@ -1,0 +1,20 @@
+{
+    "name": "octamp/wamp-message",
+    "description": "WAMP Messages",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Octamp\\Wamp\\Message\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cydrick Nonog",
+            "email": "cydrick.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    }
+}
