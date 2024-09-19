@@ -87,4 +87,9 @@ final class EventMessage extends Message implements WithDetailsInterface, WithAr
     {
         return $this->subscriptionId;
     }
+
+    public function isRestoringState(): bool
+    {
+        return isset($this->getDetails()->restoring_state) ? $this->getDetails()->restoring_state : false;
+    }
 }

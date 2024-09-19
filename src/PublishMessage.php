@@ -68,4 +68,18 @@ final class PublishMessage extends Message implements ActionMessageInterface, Wi
     {
         $this->publicationId = $publicationId;
     }
+
+    public function excludeMe(): bool
+    {
+        if (!isset($this->getOptions()->exclude_me)) {
+            return true;
+        }
+
+        return $this->getOptions()->exclude_me;
+    }
+
+    public function acknowledge(): bool
+    {
+        return $this->getOptions()->acknowledge ?? false;
+    }
 }
